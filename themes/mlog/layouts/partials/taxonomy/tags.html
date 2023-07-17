@@ -1,0 +1,13 @@
+<div class="tags">
+	<div class="svg-icon svg-baseline">
+		<svg>
+		  <use xlink:href="/icons/remixicon.symbol.svg#price-tag-3-fill">
+		</svg>
+	</div>
+  {{- range $index, $el := . -}}
+    {{- if gt $index 0 }}
+      <span class="separator">•</span>
+    {{- end }}
+    <a href="{{ ( printf "tags/%s/" ( . | urlize ) ) | relLangURL }}">{{ . }}</a>
+  {{- end -}}
+</div>

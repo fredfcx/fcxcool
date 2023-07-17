@@ -1,0 +1,28 @@
+<nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="{{ .Site.BaseURL | relLangURL }}">
+      <div class="svg-icon svg-baseline">
+        <svg>
+          <use xlink:href="/icons/remixicon.symbol.svg#body-scan-fill">
+        </svg>
+      </div> {{ .Site.Title }}
+    </a>
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle">
+      <div class="svg-icon svg-baseline">
+        <svg>
+          <use xlink:href="/icons/remixicon.symbol.svg#menu-3-fill">
+        </svg>
+      </div>
+    </label>
+    <ul class="navigation-list">
+      {{ with .Site.Menus.main}}
+        {{ range sort . }}
+          <li class="navigation-item">
+            <a class="navigation-link" href="{{ .URL | absLangURL }}">{{ .Name }}</a>
+          </li>
+        {{ end }}
+      {{ end }}
+    </ul>
+  </section>
+</nav>

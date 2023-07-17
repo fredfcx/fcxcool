@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Language" content="{{ .Site.Language.Lang }}">
+{{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+<meta name="description" content="{{ .Description | default (.Summary | default .Site.Params.description ) }}">
+<meta name="keywords" content="{{ (delimit .Keywords ",") | default .Site.Params.keywords }}">
+<title>{{ .Title }}{{ if .IsHome }} - {{ .Site.Params.description }}{{ else }} - {{ .Site.Title }} - {{ .Site.Params.description }}{{ end }}</title>
+<link rel="canonical" href="{{ .Permalink }}">
+{{- $style := resources.Get "css/normalize.css" | resources.Minify | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous" type="text/css">
+{{- if eq .Site.Params.colorscheme "light" }}
+{{- $style := resources.Get "css/style.coder.css" | resources.Minify | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous" type="text/css">
+{{- else }}
+{{- $style := resources.Get "css/style.coder.css" | resources.Minify | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous" type="text/css">
+{{- $style := resources.Get "css/style.coder-dark.css" | resources.Minify | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous" type="text/css">
+{{- end }}
+<link rel="icon" type="image/png" href="{{ .Site.Params.favicon_32 | default "/images/favicon-32x32.png" | absURL }}" sizes="32x32">
+<link rel="icon" type="image/png" href="{{ .Site.Params.favicon_16 | default "/images/favicon-16x16.png" | absURL }}" sizes="16x16">
+{{ hugo.Generator }}
+</head>
+
+  {{ $csClass := "colorscheme-light" }}
+  {{ if eq .Site.Params.colorscheme "dark" }}
+    {{ $csClass = "colorscheme-dark" }}
+  {{ else if eq .Site.Params.colorscheme "auto" }}
+    {{ $csClass = "colorscheme-auto" }}
+  {{ end }}
+  <body class="{{ $csClass }}" >
+    <main class="wrapper">
+      {{ partial "header.html" . }}
+
+      <div class="content">
+        {{ block "content" . }}{{ end }}
+      </div>
+
+      {{ partial "footer.html" . }}
+    </main>
+
+    {{ range .Site.Params.custom_js }}
+      <script src="{{ . | relURL }}"></script>
+    {{ end }}
+
+  </body>
+
+</html>

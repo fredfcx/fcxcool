@@ -1,0 +1,15 @@
+{{ if not .Site.Params.hideFooter | default false }}
+  <footer class="footer">
+    <section class="container">
+      {{- with .Site.Params.footercontent | safeHTML -}}
+        <p>{{ . }}</p>
+      {{- end -}}© {{ with .Site.Params.born}}{{ . }} To {{end}}
+        {{- now.Year }} {{ with .Site.Params.Author }}{{ . }}{{ end }} 
+        <a href="#" title="gotop" alt="gotop">
+        	<img src="/images/gopher-side_color.svg" style="height: 3rem;margin-bottom: -0.9%;">
+    	</a> {{ hugo.Version }}.
+    </section>
+  </footer>  
+  {{- $jsscript := resources.Get "js/medium-zoom.js" | resources.Minify | resources.Fingerprint }}
+  <script src="{{ $jsscript.Permalink }}" integrity="{{ $jsscript.Data.Integrity }}"></script>
+{{ end }}
