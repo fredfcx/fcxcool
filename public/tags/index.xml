@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Fred Fcx</title>
+    <link>https://fcx.cool/tags/</link>
+    <description>Recent content in Tags on Fred Fcx</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 30 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://fcx.cool/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>日记</title>
+      <link>https://fcx.cool/tags/%E6%97%A5%E8%AE%B0/</link>
+      <pubDate>Thu, 30 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://fcx.cool/tags/%E6%97%A5%E8%AE%B0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>读书笔记</title>
+      <link>https://fcx.cool/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Sun, 26 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://fcx.cool/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>检讨</title>
+      <link>https://fcx.cool/tags/%E6%A3%80%E8%AE%A8/</link>
+      <pubDate>Sun, 19 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://fcx.cool/tags/%E6%A3%80%E8%AE%A8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>动画片</title>
+      <link>https://fcx.cool/tags/%E5%8A%A8%E7%94%BB%E7%89%87/</link>
+      <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://fcx.cool/tags/%E5%8A%A8%E7%94%BB%E7%89%87/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>故事</title>
+      <link>https://fcx.cool/tags/%E6%95%85%E4%BA%8B/</link>
+      <pubDate>Wed, 01 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://fcx.cool/tags/%E6%95%85%E4%BA%8B/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>development</title>
+      <link>https://fcx.cool/tags/development/</link>
+      <pubDate>Thu, 17 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://fcx.cool/tags/development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo</title>
+      <link>https://fcx.cool/tags/hugo/</link>
+      <pubDate>Thu, 17 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://fcx.cool/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>themes</title>
+      <link>https://fcx.cool/tags/themes/</link>
+      <pubDate>Thu, 17 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://fcx.cool/tags/themes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>i18n</title>
+      <link>https://fcx.cool/tags/i18n/</link>
+      <pubDate>Mon, 31 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://fcx.cool/tags/i18n/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>go</title>
+      <link>https://fcx.cool/tags/go/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://fcx.cool/tags/go/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>golang</title>
+      <link>https://fcx.cool/tags/golang/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://fcx.cool/tags/golang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>templates</title>
+      <link>https://fcx.cool/tags/templates/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://fcx.cool/tags/templates/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
