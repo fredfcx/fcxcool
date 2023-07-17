@@ -1,0 +1,88 @@
+baseurl = "https://fcx.cool/"
+title = "Fred Fcx"
+theme = "mlog"
+languagecode = "en"
+defaultcontentlanguage = "zh"
+
+paginate = 20
+canonifyurls = true
+
+[params]
+    author = "Fred Fcx"
+    description = "费晨骁的个人网站 | Fred Fcx's personal website."
+    keywords = "blog,developer,personal"
+    info = "现在是一名小学生, 未来可能是科学家. "
+    avatarurl = "images/avatar.jpg"
+    #gravatar = "fred.fcx@example.com"
+    footercontent = "“学而时习之，不亦说乎”"
+    born = "2012"
+    dateformat = "Mon January 2, 2006"
+
+    # Specify light/dark colorscheme
+    # Supported values:
+    # "auto" (use preference set by browser)
+    # "dark" (dark background, light foreground)
+    # "light" (light background, dark foreground) (default)
+    colorscheme = "light"
+
+    # Series see also post count
+    maxSeeAlsoItems = 5
+
+[[params.social]]
+    weight = 1
+    url = "/index.xml"
+    name = "RSS"
+    rel = "noopener norefferrer alternate"
+    target = "view_window"
+    type = "application/rss+xml"
+    icon = "rss-fill"
+
+[[params.social]]
+    weight = 2
+    url = "#"
+    name = "Wechat"
+    rel = "noopener norefferrer"
+    target = "view_window"
+    type = ""
+    icon = "wechat-fill"
+
+[[params.social]]
+    weight = 3
+    url = "#"
+    name = "Oicq"
+    rel = "noopener norefferrer"
+    target = "view_window"
+    type = ""
+    icon = "qq-fill"
+
+[[params.social]]
+    weight = 4
+    url = "mailto:fred.fcx@example.com"
+    name = "Email"
+    rel = "noopener norefferrer"
+    target = "view_window"
+    type = ""
+    icon = "mail-send-fill"
+
+
+[menu]
+
+    [[menu.main]]
+    name = "关于"
+    weight = 1
+    url = "about/"
+
+    [[menu.main]]
+    name = "日志"
+    weight = 2
+    url = "posts/"
+
+    [[menu.main]]
+    name = "荣誉"
+    weight = 3
+    url = "honour/"
+
+    [[menu.main]]
+    name = "联系"
+    weight = 5
+    url = "contact/"
