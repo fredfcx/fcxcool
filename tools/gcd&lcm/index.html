@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>求最大公因数和最小公倍数</title>
+    <link rel="stylesheet" href="https://unpkg.com/chota@latest">
+</head>
+
+<body>
+    <h1>请输入要求最大公因数和最小公倍数的数：</h1>
+    <div class="row is-center">
+        <div class="card col-7">
+            <form>
+                <label for="num1">第一个数：</label>
+                <input type="number" id="num1" name="num1"><br><br>
+                <label for="num2">第二个数：</label>
+                <input type="number" id="num2" name="num2"><br><br>
+                <label for="num3">第三个数：</label>
+                <input type="number" id="thirdNum" name="num3"><br><br>
+            </form>
+            <div class="is-center">
+            
+                <button type="button" class="button primary" onclick="cal()">计算</button>
+                
+
+                    
+            </div>
+          
+                
+                <div class="is-center">最大公因数为：<span id="gcdResult"></div>
+
+                <div class="is-center">最小公倍数为：<span id="lcmResult"></div>
+            
+        </div>
+    </div>
+    </div>
+    </div>
+    <script>
+        function cal() {
+            let num1 = document.getElementById("num1").value;
+            let num2 = document.getElementById("num2").value;
+            let thirdNum = document.getElementById("thirdNum").value;
+
+            if (!num1 || !num2) {
+                document.getElementById("gcdResult").innerHTML = "请输入至少两个数字";
+                document.getElementById("lcmResult").innerHTML = "请输入至少两个数字";
+                return;
+            }
+
+            let gcd = calcGCD(num1, num2);
+            let lcm = calcLCM(num1, num2);
+
+            if (thirdNum) {
+                gcd = calcGCD(gcd, thirdNum);
+                lcm = calcLCM(lcm, thirdNum);
+            }
+
+            document.getElementById("gcdResult").innerHTML = gcd;
+            document.getElementById("lcmResult").innerHTML = lcm;
+        }
+
+        function calcGCD(x, y) {
+            while (y != 0) {
+                let temp = x % y;
+                x = y;
+                y = temp;
+            }
+            return x;
+        }
+
+        function calcLCM(x, y) {
+            return (x * y) / calcGCD(x, y);
+        }
+
+
+    </script>
+</body>
+
+</html>

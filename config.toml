@@ -83,6 +83,11 @@ canonifyurls = true
     url = "honour/"
 
     [[menu.main]]
+    name = "工具"
+    weight = 4
+    url = "tools/"
+
+    [[menu.main]]
     name = "联系"
     weight = 5
     url = "contact/"

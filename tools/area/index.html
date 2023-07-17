@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>FCX工具站 | 面积计算器</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="">
+    <meta property="og:type" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <link rel="icon" href="../assets/icons/area.svg" sizes="any">
+    <!-- <link rel="icon" href="/icon.svg" type="image/svg+xml"> -->
+    <link rel="apple-touch-icon" href="../assets/icons/area.svg">
+    <link rel="stylesheet" href="https://unpkg.com/chota@latest">
+    <script>
+    const pageUrl = window.location.href;
+    const pageName = "面积计算器";
+    // 获取历史记录数组
+    let historyList = localStorage.getItem('historyList') ? JSON.parse(localStorage.getItem('historyList')) : [];
+    let historyName = localStorage.getItem('historyName') ? JSON.parse(localStorage.getItem('historyName')) : [];
+    // 将当前页面URL添加到历史记录数组中
+    if (!Array.isArray(historyName)) {
+        historyName = []; // 如果是其他类型，将其值设置为一个空数组
+    }
+    historyList.push(pageUrl);
+    historyName.push(pageName);
+    // 将历史记录数组保存到localStorage中
+    localStorage.setItem('historyList', JSON.stringify(historyList));
+    localStorage.setItem('historyName', JSON.stringify(historyName));
+        function calculateArea() {
+            var shape = document.querySelector('input[name="shape"]:checked').value;
+            var inputUnit = document.querySelector('select[name="inputUnit"]').value;
+            var length = document.querySelector('input[name="length"]').value;
+            var width = document.querySelector('input[name="width"]').value;
+            var unit = document.querySelector('select[name="unit"]').value;
+            var area = 0;
+
+            // 输入单位转换 
+            if (inputUnit == "cm") {
+                // 不需转换  
+            } else if (inputUnit == "m") {
+                length = length * 100;
+                width = width * 100;
+            } else if (inputUnit == "mm") {
+                length = length / 10;
+                width = width / 10;
+            } else if (inputUnit == "dm") {
+                length = length * 10;
+                width = width * 10;
+            } else if (inputUnit == "in") {
+                length = length * 2.54;
+                width = width * 2.54;
+            } else if (inputUnit == "ft") {
+                length = length * 30.48;
+                width = width * 30.48;
+            }
+
+            // 面积计算
+            if (shape == "square") {
+                area = length * length;
+            } else if (shape == "rectangle") {
+                area = length * width;
+            } else if (shape == "triangle") {
+                area = (length * width) / 2;
+            } else if (shape == "circle") {
+                area = Math.PI * (width / 2) * (width / 2);
+            }
+
+            // 输出单位转换
+            if (unit == "cm2") {
+                // 不需转换  
+            } else if (unit == "m2") {
+                // 不需转换   
+            } else if (unit == "mm2") {
+                area = area * 1000;
+            } else if (unit == "ha") {
+                area = area * 0.01;
+            } else if (unit == "mu") {
+                area = area * 0.0015;
+            } else if (unit == "km2") {
+                area = area * 0.000001;
+            } else if (unit == "in2") {
+                area = area * 0.155;
+            } else if (unit == "ft2") {
+                area = area * 0.0069;
+            }
+
+            document.getElementById("result").innerHTML = "面积为: " + area + " " + unit;
+        }
+    </script>
+    <script src="vars.js"></script>
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="nav-left">
+            <a href="../index.html" class="active">首页</a>
+            <a href="#">文章</a>
+        </div>
+        <a href="../index.html" class="brand nav-center">
+            <svg t="1682152376402" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                p-id="24672" width="60" height="60">
+                <path
+                    d="M898.831744 900.517641 103.816972 900.517641c-36.002982 0-65.363683-29.286-65.363683-65.313541l0-554.949184c0-36.041868 29.361725-65.326844 65.363683-65.326844l795.015795 0c36.002982 0 65.198931 29.284977 65.198931 65.326844l0 554.949184C964.030675 871.231641 934.834726 900.517641 898.831744 900.517641L898.831744 900.517641zM103.816972 255.593236c-13.576203 0-24.711821 11.085476-24.711821 24.662703l0 554.949184c0 13.576203 11.136641 24.662703 24.711821 24.662703l795.015795 0c13.577227 0 24.547069-11.086499 24.547069-24.662703l0-554.949184c0-13.577227-10.970866-24.662703-24.547069-24.662703L103.816972 255.593236 103.816972 255.593236zM664.346245 251.774257c-11.161201 0-20.332071-9.080819-20.332071-20.332071l0-101.278661c0-13.576203-11.047614-24.623817-24.699542-24.623817L383.181611 105.539708c-13.576203 0-24.712845 11.04659-24.712845 24.623817l0 101.278661c0 11.252275-9.041934 20.332071-20.332071 20.332071-11.20111 0-20.319791-9.080819-20.319791-20.332071l0-101.278661c0-35.989679 29.323862-65.275679 65.364707-65.275679l236.133022 0c36.06745 0 65.402569 29.284977 65.402569 65.275679l0 101.278661C684.717202 242.694461 675.636383 251.774257 664.346245 251.774257L664.346245 251.774257zM413.233044 521.725502 75.694471 521.725502c-11.163247 0-20.333094-9.117658-20.333094-20.35663 0-11.252275 9.169847-20.332071 20.333094-20.332071l337.538573 0c11.277858 0 20.319791 9.080819 20.319791 20.332071C433.552835 512.607844 424.510902 521.725502 413.233044 521.725502L413.233044 521.725502zM912.894018 521.725502 575.367725 521.725502c-11.213389 0-20.332071-9.117658-20.332071-20.35663 0-11.252275 9.118682-20.332071 20.332071-20.332071l337.526293 0c11.290137 0 20.332071 9.080819 20.332071 20.332071C933.226089 512.607844 924.184155 521.725502 912.894018 521.725502L912.894018 521.725502zM557.56322 634.217552 445.085496 634.217552c-11.213389 0-20.332071-9.079796-20.332071-20.331048l0-168.763658c0-11.251252 9.118682-20.332071 20.332071-20.332071l112.478747 0c11.290137 0 20.370956 9.080819 20.370956 20.332071l0 168.763658C577.934177 625.137757 568.853357 634.217552 557.56322 634.217552L557.56322 634.217552zM465.417567 593.514525l71.827909 0L537.245476 465.454918l-71.827909 0L465.417567 593.514525 465.417567 593.514525z"
+                    fill="#8a8a8a" p-id="24673"></path>
+            </svg>
+        </a>
+        <div class="nav-right">
+            <a>推荐</a>
+            <a href="../history/index.html">最近使用</a>
+        </div>
+
+        </div>
+    </nav>
+    <hr>
+    <h1 class="is-center">面积计算器</h1>
+    <div class="row is-center">
+        <div class="card">
+            <div>
+                <input type="radio" checked name="shape" value="square">正方形
+                <input type="radio" name="shape" value="rectangle">矩形
+                <input type="radio" name="shape" value="triangle">三角形
+                <input type="radio" name="shape" value="circle">圆形
+            </div>
+
+            <div>
+                输入单位:
+                <select name="inputUnit">
+                    <option value="cm">厘米</option>
+                    <option value="m">米</option>
+                    <option value="mm">毫米</option>
+                    <option value="dm">分米</option>
+                    <option value="in">英寸</option>
+                    <option value="ft">英尺</option>
+                </select>
+            </div>
+
+            <div>
+                长:<input type="number" name="length">
+                宽:<input type="number" name="width">
+            </div>
+
+            <div>
+                输出单位:
+                <select name="unit">
+                    <option value="cm2">平方厘米</option>
+                    <option value="m2">平方米</option>
+                    <option value="mm2">平方毫米</option>
+                    <option value="ha">公顷</option>
+                    <option value="mu">亩</option>
+                    <option value="km2">平方千米</option>
+                    <option value="in2">平方英寸</option>
+                    <option value="ft2">平方英尺</option>
+                </select>
+            </div>
+            <br>
+            <div class="row is-center">
+                <button class="button primary" onclick="calculateArea()">计算面积</button>
+            </div>
+            <br>
+            <div class="row is-center" id="result">
+                面积结果显示在此处
+            </div>
+
+
+
+        </div>
+    </div>
+    <script>
+        localStorage.setItem("AREA", "AREA");
+    </script>
+</body>
+
+</html>
