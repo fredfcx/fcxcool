@@ -90,7 +90,7 @@ canonifyurls = true
     [[menu.main]]
     name = "对话AI"
     weight = 5
-    url = "gpt.fcx.cool"
+    url = "https://gpt.fcx.cool"
 
     [[menu.main]]
     name = "联系"
