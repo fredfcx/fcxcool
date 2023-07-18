@@ -88,6 +88,11 @@ canonifyurls = true
     url = "tools/"
 
     [[menu.main]]
-    name = "联系"
+    name = "对话AI"
     weight = 5
+    url = "gpt.fcx.cool"
+
+    [[menu.main]]
+    name = "联系"
+    weight = 6
     url = "contact/"
