@@ -49,7 +49,7 @@ canonifyurls = true
 [[params.social]]
     weight = 3
     url = "#"
-    name = "Oicq"
+    name = "QQ"
     rel = "noopener norefferrer"
     target = "view_window"
     type = ""
@@ -57,7 +57,7 @@ canonifyurls = true
 
 [[params.social]]
     weight = 4
-    url = "mailto:fred.fcx@example.com"
+    url = "mailto:feichenxiaoxh@outlook.com"
     name = "Email"
     rel = "noopener norefferrer"
     target = "view_window"
