@@ -23,7 +23,7 @@ canonifyurls = true
     # "auto" (use preference set by browser)
     # "dark" (dark background, light foreground)
     # "light" (light background, dark foreground) (default)
-    colorscheme = "light"
+    colorscheme = "auto"
 
     # Series see also post count
     maxSeeAlsoItems = 5
@@ -39,7 +39,7 @@ canonifyurls = true
 
 [[params.social]]
     weight = 2
-    url = "#"
+    url = "https://u.wechat.com/EI5nyAFRxA_2ozSIA9vc6Es"
     name = "Wechat"
     rel = "noopener norefferrer"
     target = "view_window"
@@ -48,7 +48,7 @@ canonifyurls = true
 
 [[params.social]]
     weight = 3
-    url = "#"
+    url = "tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=12389232&website=www.oicqzone.com"
     name = "QQ"
     rel = "noopener norefferrer"
     target = "view_window"
